@@ -2,7 +2,7 @@ NAME
     Plack::Middleware::LogWarn - converts to warns to log messages
 
 VERSION
-    version 0.001000
+    version 0.001001
 
 SYNOPSIS
     builder { enable 'LogWarn'; $app; }
