@@ -1,6 +1,6 @@
 package Plack::Middleware::LogWarn;
 BEGIN {
-  $Plack::Middleware::LogWarn::VERSION = '0.001001';
+  $Plack::Middleware::LogWarn::VERSION = '0.001002';
 }
 
 # ABSTRACT: converts to warns to log messages
@@ -36,22 +36,22 @@ Plack::Middleware::LogWarn - converts to warns to log messages
 
 =head1 VERSION
 
-version 0.001001
+version 0.001002
 
 =head1 SYNOPSIS
 
-builder {
-   enable 'LogWarn';
-   $app;
-}
+ builder {
+    enable 'LogWarn';
+    $app;
+ }
 
-# use it with another logger middleware
+ # use it with another logger middleware
 
-builder {
-   enable 'LogWarn';
-   enable 'Log4perl', category => 'plack', conf => '/path/to/log4perl.conf';
-   $app;
-}
+ builder {
+    enable 'LogWarn';
+    enable 'Log4perl', category => 'plack', conf => '/path/to/log4perl.conf';
+    $app;
+ }
 
 =head1 DESCRIPTION
 

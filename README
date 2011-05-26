@@ -2,15 +2,21 @@ NAME
     Plack::Middleware::LogWarn - converts to warns to log messages
 
 VERSION
-    version 0.001001
+    version 0.001002
 
 SYNOPSIS
-    builder { enable 'LogWarn'; $app; }
+     builder {
+        enable 'LogWarn';
+        $app;
+     }
 
-    # use it with another logger middleware
+     # use it with another logger middleware
 
-    builder { enable 'LogWarn'; enable 'Log4perl', category => 'plack', conf
-    => '/path/to/log4perl.conf'; $app; }
+     builder {
+        enable 'LogWarn';
+        enable 'Log4perl', category => 'plack', conf => '/path/to/log4perl.conf';
+        $app;
+     }
 
 DESCRIPTION
     LogWarn is a "Plack::Middleware" component that will help you get
